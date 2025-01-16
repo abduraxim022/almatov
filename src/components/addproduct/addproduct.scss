@@ -1,0 +1,21 @@
+/* AddProductDrawer.scss */
+.center-drawer .ant-drawer-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .center-drawer .ant-drawer-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%; /* Adjust the height as per requirement */
+    max-height: 90%; /* To prevent overflow */
+    overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
+  }
+  
+  .center-drawer .ant-drawer-body {
+    overflow-y: auto; /* Ensure body content scrolls */
+  }
+  
