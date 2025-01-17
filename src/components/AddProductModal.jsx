@@ -1,4 +1,3 @@
-// AddProductModal.js
 import React, { useEffect, useState } from 'react';
 import { Modal, Form, Input, Button, InputNumber, Select, message } from 'antd';
 import { Option } from 'antd/es/mentions';
@@ -6,7 +5,6 @@ import { Option } from 'antd/es/mentions';
 export default function AddProductModal({ isVisible, onClose, onSave, productToEdit }) {
   const [form] = Form.useForm();
 
-  // Set initial form values if editing a product
   useEffect(() => {
     if (productToEdit) {
       form.setFieldsValue(productToEdit);
@@ -16,9 +14,9 @@ export default function AddProductModal({ isVisible, onClose, onSave, productToE
   }, [productToEdit, form]);
 
   const handleSubmit = (values) => {
-    onSave(values);  // Pass the form data to parent component
+    onSave(values);  
     form.resetFields();
-    onClose();  // Close the modal after saving
+    onClose(); 
     message.success(productToEdit ? 'Product updated successfully!' : 'Product added successfully!');
   };
 
@@ -35,7 +33,7 @@ export default function AddProductModal({ isVisible, onClose, onSave, productToE
           label="Maxsulot Nomi"
           rules={[{ required: true, message: 'Please input product name!' }]}
         >
-          <Input placeholder="Product Name" />
+          <Input placeholder="Maxsulot Nomi" />
         </Form.Item>
 
         <Form.Item
@@ -43,7 +41,7 @@ export default function AddProductModal({ isVisible, onClose, onSave, productToE
           label=" Kelgan Narxi"
           rules={[{ required: true, message: 'Please input incoming price!' }]}
         >
-          <InputNumber style={{ width: '100%' }} placeholder="Incoming Price" min={0} precision={2} />
+          <InputNumber style={{ width: '100%' }} placeholder="Kelgan Narxi" min={0} precision={2} />
         </Form.Item>
 
         <Form.Item
@@ -51,7 +49,7 @@ export default function AddProductModal({ isVisible, onClose, onSave, productToE
           label="Sotiladigan Narxi"
           rules={[{ required: true, message: 'Please input selling price!' }]}
         >
-          <InputNumber style={{ width: '100%' }} placeholder="Selling Price" min={0} precision={2} />
+          <InputNumber style={{ width: '100%' }} placeholder="Sotiladigan Narxi" min={0} precision={2} />
         </Form.Item>
 
         <Form.Item
@@ -59,7 +57,7 @@ export default function AddProductModal({ isVisible, onClose, onSave, productToE
           label="Omborda bor"
           rules={[{ required: true, message: 'Please input stock!' }]}
         >
-          <InputNumber style={{ width: '100%' }} placeholder="Stock Quantity" min={0} />
+          <InputNumber style={{ width: '100%' }} placeholder="Omborda" min={0} />
         </Form.Item>
 
 

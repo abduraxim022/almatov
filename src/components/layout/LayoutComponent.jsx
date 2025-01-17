@@ -36,26 +36,20 @@ export default function LayoutComponent() {
         </div>
       </Sidebar>
 
-      {/* Top Navigation Button */}
+   
       <Button
         icon="pi pi-bars"
         className="p-button-text p-button-plain"
         style={{
           position: 'fixed',
           top: '16px',
-          right: '16px', // Button on the right side
+          right: '16px', 
           zIndex: 1001,
         }}
         onClick={() => setIsSidebarVisible(true)}
       />
-
-      {/* Main Layout */}
       <div
         className="content-container"
-        style={{
-          margin: isMobile ? '56px 16px' : '16px',
-          padding: '16px',
-        }}
       >
         <Outlet />
       </div>
