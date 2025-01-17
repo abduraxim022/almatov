@@ -2,7 +2,8 @@ import React from 'react';
 import {  Route, Routes } from 'react-router-dom';
 import LayoutComponent from '../layout/LayoutComponent';  
 import Product from '../product/Product'; 
-import User from '../User';       
+import User from '../User';      
+
 
 export default function Sidebar() {
   return (
@@ -10,7 +11,10 @@ export default function Sidebar() {
         <Route element={<LayoutComponent />}>
           <Route path="/product" element={<Product />} />
           <Route path="/user" element={<User />} />
+         
+       
         </Route>
+        
       </Routes>
       
     

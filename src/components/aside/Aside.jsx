@@ -31,9 +31,6 @@ export default function Aside() {
           <Link to="/product" className="sidebar-link" onClick={() => setIsSidebarVisible(false)}>
             <i className="pi pi-box" style={{ marginRight: '8px' }}></i> Product
           </Link>
-          <Link to="/user" className="sidebar-link" onClick={() => setIsSidebarVisible(false)}>
-            <i className="pi pi-user" style={{ marginRight: '8px' }}></i> User
-          </Link>
         </div>
       </Sidebar>
 

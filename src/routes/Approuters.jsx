@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Login from '../components/login/Login'
 import PrivateRoute from '../components/PrivateRoute'
 import Sidebar from '../components/sidebar/Sidebar'
-import Notfound from '../components/notfound/Notfound'
+import Notlogin from '../components/notfound/notlogin'
 
 export default function Approuters() {
   return (
@@ -17,8 +17,9 @@ export default function Approuters() {
               <Sidebar/>
             </PrivateRoute>
           }
+          
         />
-        <Route path='*' element={<Notfound/>}/>
+         <Route path='*' element={<Notlogin/>}/>
       </Routes>
     </div>
   )
