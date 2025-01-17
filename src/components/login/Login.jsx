@@ -24,15 +24,15 @@ export default function Login() {
     if (username === defaultUsername && password === defaultPassword) {
       const token = generateToken(); 
       localStorage.setItem('authToken', token); 
-      message.success('Login successful!');
+      message.success('Tizimga kirildi!');
       navigate('/product');
     } else {
-      message.error('Incorrect username or password');
+      message.error('Foydalanuchi nomi yoki parolda hatolik');
     }
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: 'auto', padding: '20px' }}>
+    <div className='login' style={{ maxWidth: 400, margin: 'auto', padding: '20px' }}>
       <h2 style={{ textAlign: 'center' }}>Admin Tizimga Kirish</h2>
       <Form
         layout="vertical"

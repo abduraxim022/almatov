@@ -1,0 +1,26 @@
+
+.sherin{
+    margin-left: 10px;
+}
+
+.MuiToolbar-root{
+    height: 80px;
+    border-radius: 8px;
+    .MuiIconButton-root{
+        margin-right: 30px;
+        svg{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    
+}
+
+@media(max-width:467px){
+    .MuiToolbar-root{
+        height: 40px;
+        border-radius: 8px;
+    
+        }
+        
+}

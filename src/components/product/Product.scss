@@ -1,6 +1,5 @@
 .product-container {
   padding: 20px;
-  margin-top: 65px;
   background-color: #f0efef97;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -60,10 +59,12 @@ td th{
   }
 
   .nav-filter {
+    margin-top: 15px;
     flex-direction: column;
     align-items: center;
   }
 
+ 
   .nav-filter input {
     width: 100%;
     max-width: 300px;

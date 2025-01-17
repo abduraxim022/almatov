@@ -18,6 +18,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AddProductModal from "../AddProductModal";
 import "./Product.scss";
+import MenuAppBar from "../menu/MenuAppBar";
 
 export default function Product() {
   const [products, setProducts] = useState([]);
@@ -64,6 +65,8 @@ export default function Product() {
   };
 
   return (
+    <div>
+      <MenuAppBar/>
     <div className="product-container">
       <ToastContainer position="top-center" autoClose={3000} />
       <div className="nav-filter">
@@ -92,7 +95,7 @@ export default function Product() {
       </div>
 
       {filteredProducts.length === 0 ? (
-        <Typography variant="h6" color="textSecondary" align="center">
+        <Typography variant="h6" className="het6" color="textSecondary" align="center">
           Maxsulot topilmadi
         </Typography>
       ) : (
@@ -144,6 +147,7 @@ export default function Product() {
         onSave={handleAddProduct}
         productToEdit={productToEdit} 
       />
+    </div>
     </div>
   );
 }
